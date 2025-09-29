@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+logform = "0.5.2"
+serde_json = "1.0.145"
+winston_proxy_transport = "0.3.0"
+winston_transport = "0.5.0"
