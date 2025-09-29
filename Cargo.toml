@@ -2,6 +2,8 @@
 name = "winston_file"
 version = "0.1.0"
 edition = "2024"
+description = "file transport for winston"
+license = "MIT"
 
 [dependencies]
 logform = "0.5.2"
