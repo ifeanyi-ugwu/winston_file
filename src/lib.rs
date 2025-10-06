@@ -93,7 +93,7 @@ impl FileTransport {
     }
 }
 
-impl Transport for FileTransport {
+impl Transport<LogInfo> for FileTransport {
     /*fn log(&self, message: &str, _level: &str) {
         let mut file = self.file.lock().unwrap();
 
@@ -122,14 +122,6 @@ impl Transport for FileTransport {
 
         file.flush()
             .map_err(|e| format!("Failed to flush file: {}", e))
-    }
-
-    fn get_level(&self) -> Option<&String> {
-        self.options.level.as_ref()
-    }
-
-    fn get_format(&self) -> Option<Arc<dyn Format<Input = LogInfo> + Send + Sync + 'static>> {
-        self.options.format.as_ref().cloned()
     }
 
     fn query(&self, query: &LogQuery) -> Result<Vec<LogInfo>, String> {
@@ -214,8 +206,8 @@ impl Drop for FileTransport {
     }
 }
 
-impl Proxy for FileTransport {
-    fn proxy(&self, target: &dyn Proxy) -> Result<usize, String> {
+impl Proxy<LogInfo> for FileTransport {
+    fn proxy(&self, target: &dyn Proxy<LogInfo>) -> Result<usize, String> {
         let _lock = self
             .proxy_lock
             .lock()

@@ -222,15 +222,13 @@ checksum = "34080505efa8e45a4b816c349525ebe327ceaa8559756f0356cba97ef3bf7432"
 
 [[package]]
 name = "logform"
-version = "0.5.2"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1242f2f5ffd7c215346e1068ac93d4b3e2b3b1a09e52801fd6c01c10e32c25c4"
+checksum = "d936781a5851d944659e4a8634ce6dcfa892baa6bb9cf387c792fee4193632da"
 dependencies = [
  "chrono",
  "colored",
- "lazy_static",
  "regex",
- "serde",
  "serde_json",
 ]
 
@@ -703,9 +701,9 @@ dependencies = [
 
 [[package]]
 name = "winston_proxy_transport"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fea11018b8f6e1ce6fd67b4ca95a6051c54e8b30bdab31399d990e1416185112"
+checksum = "afe06865efbed7213d7cbebf2319b811ef337d2392ea85c617aac29a5b1b7af3"
 dependencies = [
  "logform",
  "winston_transport",
@@ -713,9 +711,9 @@ dependencies = [
 
 [[package]]
 name = "winston_transport"
-version = "0.5.0"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3154bb6a9251c23a2e75029e197f8121b755d5198b41c4bcabaf4ccf98090331"
+checksum = "633b9a0c85c302d1633a8e0192e5d454e2c914a1b3345bbed9478fcd76827324"
 dependencies = [
  "chrono",
  "dateparser",
